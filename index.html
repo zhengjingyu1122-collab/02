@@ -1,295 +1,74 @@
-
-<!DOCTYPE html>
-<html lang="zh-Hant">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>達睿沖繩員工旅遊・行程表</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<style>
-  :root{ --bg:#EDE3C4; --surface:#FFFFFF; --ocean-deep:#0A5C74; --ocean:#17AEC9; --ocean-light:#B9EAF0; --coral:#F2A930; --ink:#123138; --ink-soft:#4C6E74; --line:#DACB9C; }
-  *{ box-sizing:border-box; -webkit-tap-highlight-color: rgba(27,138,155,0.25); }
-  body{ margin:0; background: linear-gradient(180deg, #BFE7F0 0%, #EDE3C4 30%), var(--bg); color:var(--ink); font-family:'Noto Sans TC',sans-serif; padding:24px 16px 90px; }
-  .wrap{ max-width:720px; margin:0 auto; }
-  h1{ font-family:'Noto Serif TC',serif; font-weight:900; font-size:24px; color:var(--ocean-deep); margin:0 0 4px; }
-  .sub{ font-size:12.5px; color:var(--ink-soft); margin:0 0 18px; }
-  .ro-radio{ position:absolute; opacity:0; width:1px; height:1px; pointer-events:none; }
-  .ro-day{ display:none; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px; }
-  .ro-map{ width:100%; height:220px; border-radius:10px; overflow:hidden; border:1px solid var(--line); margin-bottom:16px; background:var(--bg); }
-  .ro-empty{ text-align:center; color:var(--ink-soft); padding:30px 0; font-size:13.5px; margin:0; }
-  .ro-stop{ display:grid; grid-template-columns:60px 20px 1fr; gap:4px 10px; align-items:center; margin-bottom:4px; }
-  .ro-time{ font-size:12.5px; font-weight:700; color:var(--ocean-deep); text-align:center; }
-  .ro-dotcol{ display:flex; flex-direction:column; align-items:center; height:100%; min-height:50px; }
-  .ro-dot{ width:11px; height:11px; border-radius:50%; background:var(--ocean); border:2px solid #fff; box-shadow:0 0 0 2px var(--ocean); margin-top:6px; flex-shrink:0; }
-  .ro-thread{ width:2px; flex:1; background:var(--line); margin-top:2px; }
-  .ro-stop:last-child .ro-thread{ background:transparent; }
-  .ro-card{ background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:12px 14px; font-size:14px; font-weight:500; display:flex; align-items:center; justify-content:space-between; gap:8px; text-decoration:none; color:var(--ink); }
-  .ro-card:active{ background:var(--ocean-light); border-color:var(--ocean); }
-  .ro-card svg{ width:15px; height:15px; color:var(--coral); flex-shrink:0; opacity:.8; }
-  footer{ text-align:center; font-size:11.5px; color:var(--ink-soft); margin-top:16px; }
-
-  .ro-tabbar{
-    display:flex; gap:4px; margin-top:18px;
-    padding:8px; background:var(--surface); border:1px solid var(--line); border-radius:14px;
-    position:sticky; bottom:12px; box-shadow:0 4px 16px rgba(14,74,87,0.12);
-  }
-  .ro-tab{
-    flex:1; text-align:center;
-    font-family:'Noto Serif TC',serif; font-weight:700; font-size:12.5px;
-    padding:10px 4px; color:var(--ink-soft); border-radius:10px; cursor:pointer;
-    -webkit-user-select:none; user-select:none;
-  }
-  .ro-tab .ro-en{ display:block; font-family:'Noto Sans TC',sans-serif; font-weight:400; font-size:8.5px; letter-spacing:1px; margin-top:1px; }
-  #roday0:checked ~ .ro-content #ro-day-0{ display:block; }
-  #roday1:checked ~ .ro-content #ro-day-1{ display:block; }
-  #roday2:checked ~ .ro-content #ro-day-2{ display:block; }
-  #roday3:checked ~ .ro-content #ro-day-3{ display:block; }
-  #roday4:checked ~ .ro-content #ro-day-4{ display:block; }
-  #roday0:checked ~ .ro-tabbar label[for="roday0"]{ background:var(--ocean-deep); color:#fff; }
-  #roday1:checked ~ .ro-tabbar label[for="roday1"]{ background:var(--ocean-deep); color:#fff; }
-  #roday2:checked ~ .ro-tabbar label[for="roday2"]{ background:var(--ocean-deep); color:#fff; }
-  #roday3:checked ~ .ro-tabbar label[for="roday3"]{ background:var(--ocean-deep); color:#fff; }
-  #roday4:checked ~ .ro-tabbar label[for="roday4"]{ background:var(--ocean-deep); color:#fff; }
-</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    body {background-color: #e8ddb7}
+    p.p2 {margin: 0.0px 0.0px 18.0px 0.0px; font: 12.5px 'Helvetica Neue'; color: #3c5b61; -webkit-text-stroke: #3c5b61}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #10252a; -webkit-text-stroke: #10252a; background-color: #e8ddb7; min-height: 15.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; -webkit-text-stroke: #000000; min-height: 13.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.5px 'Helvetica Neue'; color: #0e4a61; -webkit-text-stroke: #0e4a61}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #10252a; -webkit-text-stroke: #10252a; background-color: #1c9fbd; min-height: 15.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #10252a; -webkit-text-stroke: #10252a; background-color: #d1c18b; min-height: 15.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Helvetica Neue'; color: #10252a; -webkit-text-stroke: #10252a}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Helvetica Neue'; color: #ed9925; -webkit-text-stroke: #ed9925; min-height: 17.0px}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.5px 'PingFang TC'; color: #0e4a61; -webkit-text-stroke: #0e4a61}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.CJK Symbols Fallback TC'; color: #10252a; -webkit-text-stroke: #10252a}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #10252a; -webkit-text-stroke: #10252a; min-height: 15.0px}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.5px 'PingFang TC'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 8.5px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.5px 'PingFang TC'; color: #3c5b61; -webkit-text-stroke: #3c5b61}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 8.5px 'Helvetica Neue'; color: #3c5b61; -webkit-text-stroke: #3c5b61}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.5px 'PingFang TC'; color: #3c5b61; -webkit-text-stroke: #3c5b61}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 24.0px '.CJK Symbols Fallback TC'; font-kerning: none}
+    span.s3 {font: 12.5px 'PingFang TC'; font-kerning: none}
+    span.s4 {font: 12.5px '.CJK Symbols Fallback TC'; font-kerning: none}
+    span.s5 {font-kerning: none; background-color: #ffffff}
+    span.s6 {font-kerning: none; background-color: #e8ddb7}
+    span.s7 {font: 14.0px 'PingFang TC'; font-kerning: none}
+    span.s8 {font: 14.0px '.CJK Symbols Fallback TC'; font-kerning: none}
+    span.s9 {font-kerning: none; background-color: #0e4a61}
+  </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>達睿沖繩員工旅遊・行程表</h1>
-  <p class="sub">2026/10/26－10/30・點景點卡片可直接開啟 Google 地圖導航</p>
-
-  <input type="radio" name="roday" id="roday0" class="ro-radio" checked><input type="radio" name="roday" id="roday1" class="ro-radio"><input type="radio" name="roday" id="roday2" class="ro-radio"><input type="radio" name="roday" id="roday3" class="ro-radio"><input type="radio" name="roday" id="roday4" class="ro-radio">
-  <div class="ro-content">
-    <section class="ro-day" id="ro-day-0"><div class="ro-map" id="ro-map-0"></div>
-            <div class="ro-stop">
-              <div class="ro-time">17:30</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E7%BE%8E%E9%BA%97%E6%B5%B7%E6%B5%B7%E6%B4%8B%E9%A4%A8%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>美麗海海洋館</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">18:30</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%A4%E5%AE%87%E5%88%A9%E5%B3%B6%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>古宇利島</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">20:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E8%90%AC%E5%BA%A7%E6%AF%9B%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>萬座毛</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">21:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E6%B0%91%E5%AE%BF%EF%BC%88CHATAN%20OCEAN%20Villa%EF%BC%89%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>民宿（CHATAN OCEAN Villa）</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div></section><section class="ro-day" id="ro-day-1"><div class="ro-map" id="ro-map-1"></div>
-            <div class="ro-stop">
-              <div class="ro-time">14:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=plaza%20house%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>plaza house</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">15:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E6%B3%A1%E7%80%A8%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>泡瀨</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">20:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E6%B0%91%E5%AE%BF%EF%BC%88CHATAN%20OCEAN%20Villa%EF%BC%89%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>民宿（CHATAN OCEAN Villa）</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div></section><section class="ro-day" id="ro-day-2"><div class="ro-map" id="ro-map-2"></div>
-            <div class="ro-stop">
-              <div class="ro-time">02:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E5%98%89%E7%A6%8F%E9%98%BF%E5%8F%A4%E8%B1%AC%E7%81%AB%E9%8D%8B%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>嘉福阿古豬火鍋</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">05:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=Vegan%20Cafe%20Niceness%E3%80%90%E7%B4%A0%E9%A3%9F%E3%80%91%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>Vegan Cafe Niceness【素食】</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">19:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=Cookhal%E3%80%90%E7%B4%A0%E9%A3%9F%E5%8F%8B%E5%96%84%E3%80%91%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>Cookhal【素食友善】</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div></section><section class="ro-day" id="ro-day-3"><div class="ro-map" id="ro-map-3"></div>
-            <div class="ro-stop">
-              <div class="ro-time">00:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E8%8A%B1%E4%BA%BA%E9%80%A2-%E6%8A%AB%E8%96%A9%E3%80%90%E5%8F%AF%E7%B4%A0%E9%A3%9F%E3%80%91%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>花人逢-披薩【可素食】</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">01:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E9%83%A8%E7%80%A8%E5%90%8D%E6%B5%B7%E4%B8%AD%E5%85%AC%E5%9C%92%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>部瀨名海中公園</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">04:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E6%B3%A1%E7%80%A8%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>泡瀨</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">16:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%B8%E4%BA%80%E8%A3%BD%E9%BA%BA(%E5%8C%97%E8%B0%B7%E5%BA%97)%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>丸亀製麺(北谷店)</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">19:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E6%B8%AF%E5%B7%9D%E5%A4%96%E4%BA%BA%E4%BD%8F%E5%AE%85%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>港川外人住宅</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">20:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E6%B3%A1%E7%80%A8%E6%BC%81%E6%B8%AF%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>泡瀨漁港</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div></section><section class="ro-day" id="ro-day-4"><div class="ro-map" id="ro-map-4"></div>
-            <div class="ro-stop">
-              <div class="ro-time">14:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=banta%20cafe%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>banta cafe</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">20:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=A%26W%20Makiminato%20%E7%89%A7%E6%B8%AF%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>A&amp;W Makiminato 牧港</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div>
-            <div class="ro-stop">
-              <div class="ro-time">21:00</div>
-              <div class="ro-dotcol"><div class="ro-dot"></div><div class="ro-thread"></div></div>
-              <a class="ro-card" href="https://www.google.com/maps/search/?api=1&query=%E9%82%A3%E9%9C%B8%E6%A9%9F%E5%A0%B4%20%E6%B2%96%E7%B8%84" target="_blank" rel="noopener noreferrer">
-                <span>那霸機場</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </a>
-            </div></section>
-  </div>
-
-  <div class="ro-tabbar">
-    <label for="roday0" class="ro-tab">週一<span class="ro-en">10/26</span></label><label for="roday1" class="ro-tab">週二<span class="ro-en">10/27</span></label><label for="roday2" class="ro-tab">週三<span class="ro-en">10/28</span></label><label for="roday3" class="ro-tab">週四<span class="ro-en">10/29</span></label><label for="roday4" class="ro-tab">週五<span class="ro-en">10/30</span></label>
-  </div>
-
-  <footer>此為唯讀行程表，如需調整請聯繫行程規劃人員</footer>
-</div>
-<script>
-  var ROUTES = [["美麗海海洋館","古宇利島","萬座毛","民宿（CHATAN OCEAN Villa）"],["plaza house","泡瀨","民宿（CHATAN OCEAN Villa）"],["嘉福阿古豬火鍋","Vegan Cafe Niceness【素食】","Cookhal【素食友善】"],["花人逢-披薩【可素食】","部瀨名海中公園","泡瀨","丸亀製麺(北谷店)","港川外人住宅","泡瀨漁港"],["banta cafe","A&W Makiminato 牧港","那霸機場"]];
-  var COORDS = {"美麗海海洋館":[26.6939,127.8779],"古宇利島":[26.7042,128.0206],"萬座毛":[26.5039,127.8453],"部瀨名海中公園":[26.6642,127.9636],"琉球村":[26.5217,127.9139],"青之洞窟":[26.5031,127.8377],"花人逢-披薩【可素食】":[26.6725,127.9089],"古宇利蝦蝦飯":[26.7042,128.0206],"shinmei coffee":[26.6875,128.0334],"see living cafe":[26.5908,127.9767],"satchan soba":[26.5908,127.9767],"嘉福阿古豬火鍋":[26.5039,127.8453],"美國村":[26.3153,127.7561],"泡瀨":[26.3389,127.8354],"泡瀨漁港":[26.3389,127.8354],"plaza house":[26.3389,127.8129],"港川外人住宅":[26.2956,127.7826],"kiseki 貝出汁沖繩":[26.3153,127.7561],"丸亀製麺(北谷店)":[26.3153,127.7561],"Hanon-厚鬆餅【素食友善】":[26.3153,127.7561],"hoppepan-麵包":[26.2478,127.7203],"A&W Makiminato 牧港":[26.2478,127.7203],"Sandbox Burgers":[26.3153,127.7561],"Kanna Plus【素食友善】":[26.3232,127.7597],"banta cafe":[26.3956,127.7419],"琉球的牛":[26.3153,127.7561],"國際通":[26.2141,127.6892],"沖繩縣立美術館":[26.2231,127.6795],"Sairaiin (Daruma Temple)":[26.2172,127.7189],"DFS免稅百貨":[26.2225,127.6798],"eibun 沖繩麵":[26.2153,127.6825],"旅の終わりの朝ごはん -早餐":[26.2117,127.6892],"TAKUYOSHI那霸":[26.2141,127.6892],"琉歌":[26.2141,127.69],"目利きの銀次 新都心本舗":[26.2231,127.6795],"珀塔瑪-沖繩飯糰【素食友善】":[26.2153,127.6825],"風獅爺雞蛋糕":[26.2145,127.687],"nona":[26.228,127.6773],"ちゅらさん6":[26.2137,127.679],"玉泉洞【有素食】":[26.1611,127.7423],"瀨長島":[26.1875,127.6459],"糸滿漁民食堂":[26.1247,127.6683],"糸滿魚市場":[26.1247,127.6683],"ニッシン楽働館":[26.1247,127.6683],"iias沖繩豐崎":[26.1611,127.6551],"Ashibinaa Outlet":[26.1656,127.6572],"Parco City":[26.1611,127.6551],"那霸機場":[26.1958,127.6459],"民宿（CHATAN OCEAN Villa）":[26.3153,127.7561],"Vegan Cafe Niceness【素食】":[26.5908,127.9767],"Cookhal【素食友善】":[26.6014,127.9908],"Vegeful Lunch Cafe【素食自助餐】":[26.3175,127.7589],"浮島ガーデン【素食】":[26.2141,127.69],"金壺食堂【素食】":[26.2153,127.6825],"山之茶屋・樂水【素食】":[26.1428,127.7715]};
-  var mapEntries = {};
-  var geoCache = {};
-
-  function resolveLocation(name){
-    if (COORDS[name]) return Promise.resolve({ lat: COORDS[name][0], lon: COORDS[name][1] });
-    if (geoCache[name]) return Promise.resolve(geoCache[name]);
-    var url = 'https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' + encodeURIComponent(name + ' 沖縄 Okinawa');
-    return fetch(url).then(function(r){ return r.json(); }).then(function(data){
-      if (data && data.length){
-        var loc = { lat: parseFloat(data[0].lat), lon: parseFloat(data[0].lon) };
-        geoCache[name] = loc;
-        return loc;
-      }
-      return null;
-    }).catch(function(err){ console.error('geocode failed', err); return null; });
-  }
-
-  function renderDayMap(i){
-    if (typeof L === 'undefined') return;
-    var names = ROUTES[i];
-    if (!names || names.length === 0) return;
-    var containerId = 'ro-map-' + i;
-    var el = document.getElementById(containerId);
-    if (!el) return;
-
-    if (!mapEntries[i]){
-      try{
-        var m = L.map(containerId).setView([26.35, 127.9], 10);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
-        }).addTo(m);
-        var layer = L.layerGroup().addTo(m);
-        mapEntries[i] = { map: m, layer: layer, done: false };
-      }catch(err){ console.error('map init failed', err); return; }
-    }
-    var entry = mapEntries[i];
-    setTimeout(function(){ if (entry.map) entry.map.invalidateSize(); }, 60);
-    if (entry.done) return;
-    entry.done = true;
-
-    Promise.all(names.map(resolveLocation)).then(function(locs){
-      entry.layer.clearLayers();
-      var pts = [];
-      locs.forEach(function(loc, idx){
-        if (loc){
-          pts.push([loc.lat, loc.lon]);
-          L.marker([loc.lat, loc.lon]).addTo(entry.layer).bindPopup((idx + 1) + '. ' + names[idx]);
-        }
-      });
-      if (pts.length > 1){
-        L.polyline(pts, { color: '#17AEC9', weight: 3, opacity: 0.7 }).addTo(entry.layer);
-      }
-      if (pts.length > 0){
-        entry.map.fitBounds(pts, { padding: [30, 30] });
-      }
-    });
-  }
-
-  renderDayMap(0);
-  for (var d = 0; d < ROUTES.length; d++){
-    (function(idx){
-      var radio = document.getElementById('roday' + idx);
-      if (radio) radio.addEventListener('change', function(){ renderDayMap(idx); });
-    })(d);
-  }
-</script>
+<h1 style="margin: 0.0px 0.0px 4.0px 0.0px; font: 24.0px 'PingFang TC'; color: #0e4a61; -webkit-text-stroke: #0e4a61"><span class="s1">達睿沖繩員工旅遊</span><span class="s2">・</span><span class="s1">行程表</span></h1>
+<p class="p2"><span class="s1">2026/10/26</span><span class="s3">－</span><span class="s1">10/30</span><span class="s4">・</span><span class="s3">點景點卡片可直接開啟</span><span class="s1"> Google </span><span class="s3">地圖導航</span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s5">18:30</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1"></span><br></p>
+<p class="p8"><span class="s6"><a href="https://www.google.com/maps/search/?api=1&amp;query=Yasaimakigushiya%20Gururi%20Honten%20%E6%B2%96%E7%B8%84">Yasaimakigushiya Gururi Honten<span class="s1"></span></a></span></p>
+<p class="p9"><span class="s1"><a href="https://www.google.com/maps/search/?api=1&amp;query=Yasaimakigushiya%20Gururi%20Honten%20%E6%B2%96%E7%B8%84"></a></span><br></p>
+<p class="p10"><span class="s5">－</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1"></span><br></p>
+<p class="p11"><span class="s6"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%97%E3%83%AD%E3%83%9E%E3%83%BC%E3%83%88%E6%A5%AD%E5%8B%99%E7%94%A8%E9%A3%9F%E5%93%81%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%20%E5%8C%97%E8%B0%B7%E5%BA%97%20%E6%B2%96%E7%B8%84">プロマート<span class="s7">業務用食品</span><span class="s8">スーパー</span><span class="s1"> </span><span class="s7">北谷店</span></a></span></p>
+<p class="p9"><span class="s1"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%97%E3%83%AD%E3%83%9E%E3%83%BC%E3%83%88%E6%A5%AD%E5%8B%99%E7%94%A8%E9%A3%9F%E5%93%81%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%20%E5%8C%97%E8%B0%B7%E5%BA%97%20%E6%B2%96%E7%B8%84"></a></span><br></p>
+<p class="p10"><span class="s5">－</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p12"><span class="s1"></span><br></p>
+<p class="p8"><span class="s6"><a href="https://www.google.com/maps/search/?api=1&amp;query=CHATAN%20OCEAN%20Villa%20%E6%B2%96%E7%B8%84">CHATAN OCEAN Villa<span class="s1"></span></a></span></p>
+<p class="p9"><span class="s1"><a href="https://www.google.com/maps/search/?api=1&amp;query=CHATAN%20OCEAN%20Villa%20%E6%B2%96%E7%B8%84"></a></span><br></p>
+<p class="p13"><span class="s9">週一</span></p>
+<p class="p14"><span class="s9">10/26</span></p>
+<p class="p15"><span class="s5">週二</span></p>
+<p class="p16"><span class="s5">10/27</span></p>
+<p class="p15"><span class="s5">週三</span></p>
+<p class="p16"><span class="s5">10/28</span></p>
+<p class="p15"><span class="s5">週四</span></p>
+<p class="p16"><span class="s5">10/29</span></p>
+<p class="p15"><span class="s5">週五</span></p>
+<p class="p16"><span class="s5">10/30</span></p>
+<p class="p17"><span class="s1">此為唯讀行程表，如需調整請聯繫行程規劃人員</span></p>
 </body>
 </html>
